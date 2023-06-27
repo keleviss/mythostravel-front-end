@@ -1,0 +1,77 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("bgimg.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+#search-form {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+#icon {
+  margin-top: 10px;
+}
+
+.form-group {
+  flex: 0 0 15%;
+  display: flex;
+  margin: 0 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  align-items: center;
+}
+  
+.form-group select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"],
+.form-group .ui-datepicker-trigger {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+  
+.form-group:last-child {
+  margin-bottom: 0;
+}
+  
+button {
+  display: block;
+  width: 100%;
+  padding: 7px;
+  background-color: #3f3f3f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MythosTravel</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="busbooking.css">
+</head>
+<body>
+    
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-card" id="myNavbar">
+            <a href="#home" class="w3-bar-item w3-button w3-wide" id="logo"><b>MythosTravel</b></a>
+            <!-- Right-sided navbar links -->
+            <div class="w3-right w3-hide-small">
+                <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-ticket"></i>Tickets</a>
+                <a href="#about" class="w3-bar-item w3-button">About</a>
+                <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> Contact</a>
+            </div>
+
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <!-- Sidebar on small screens when clicking the menu icon -->
+            <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+                <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+                <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">Tickets</a>
+                <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
+                <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">Contact</a>
+            </nav>
+        </div>
+        <div class="w3-display-container w3-red" id="alert" style="margin-top: -20px;"> 
+        </div>
+    </div>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+        <div class="w3-display-container w3-text-white" style="padding:48px;">
+            <br><br><br><br>
+            <span class="w3-jumbo w3-hide-small">Book your tickets online!</span><br>
+            <span class="w3-xxlarge w3-hide-large w3-hide-medium">Book your tickets online!</span>
+            <span class="w3-large">Plan your next trip in just a few clicks.</span>
+        </div> 
+
+        <div class="w3-container" style="padding:48px">
+            <form id="search-form">
+                <div class="w3-text-grey" id="icon">
+                    <i class="fa fa-map-marker"></i>
+                </div>
+                <div class="form-group">
+                    <select id="start-city" name="start-city" required>
+                        <option value="" selected>- From -</option>
+                        <option value="Athens">Athens</option>
+                        <option value="Thessaloniki">Thessaloniki</option>
+                        <option value="Patras">Patras</option>
+                        <option value="Larisa">Larisa</option>
+                        <option value="Karditsa">Karditsa</option>
+                    </select>
+                </div>
+                <div class="w3-text-grey" id="icon">
+                    <i class="fa fa-map-marker"></i>
+                </div>
+                <div class="form-group">
+                    <select id="destination-city" name="destination-city" required>
+                        <option value="" selected>- To -</option>
+                        <option value="Athens">Athens</option>
+                        <option value="Thessaloniki">Thessaloniki</option>
+                        <option value="Patras">Patras</option>
+                        <option value="Larisa">Larisa</option>
+                        <option value="Karditsa">Karditsa</option>
+                    </select> 
+                </div>
+                <div class="w3-text-grey" id="icon">
+                    <i class="fa fa-calendar"></i>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="trip-date" required>
+                </div>
+                <div class="w3-text-grey" id="icon">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="form-group">
+                    <select id="passengers" name="passengers">
+                        <option value="1" selected>1 passenger</option>
+                        <option value="2">2 passengers</option>
+                        <option value="3">3 passengers</option>
+                    </select> 
+                </div>
+                <div class="form-group">
+                    <button id="submitButton">Search</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <div class="w3-container" style="padding:128px 16px" id="about">
+        <h3 class="w3-center">Welcome to MythosTravel!</h3>
+        <p class="w3-center" style="text-align:justify; padding-left: 100px; padding-right:100px;">At MythosTravel, we believe that exploring Greece's rich cultural heritage and breathtaking landscapes 
+            should be accessible to everyone. Our online platform is dedicated to simplifying your travel experience by providing a seamless and 
+            convenient way to book bus tickets for your journeys across Greece.</p>
+        <p class="w3-center" style="text-align:justify;padding-left: 100px; padding-right:100px;">Greece, a land steeped in ancient mythology and vibrant history, offers an unparalleled array of destinations waiting to be discovered. 
+            From the sun-soaked beaches of the Greek islands to the majestic mountains of the mainland, our bus ticket booking service enables you 
+            to embark on unforgettable adventures.</p>
+            
+        <p class="w3-center w3-padding">Why choose MythosTravel?</p>
+        <div class="w3-row-padding w3-center" style="margin-top:64px">
+            <div class="w3-quarter">
+                <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+                <p class="w3-large">Extensive Route Network</p>
+                <p style="text-align:justify;">We have partnered with reliable bus operators across Greece to bring you an extensive network of routes, connecting popular tourist destinations as well as hidden gems off the beaten path. Whether you're planning a trip to Athens, Santorini, Thessaloniki, or any other enchanting Greek location, we've got you covered.</p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Easy Booking Process</p>
+                <p style="text-align:justify;">Our user-friendly online platform ensures a hassle-free booking experience. Simply enter your desired destinations, travel dates, and the number of passengers, and our system will present you with a range of available bus options. Choose the one that suits your preferences, make a secure payment, and receive your e-ticket directly in your inbox.</p>
+            </div>
+            <div class="w3-quarter">
+              <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+              <p class="w3-large">Reliable Partners</p>
+              <p style="text-align:justify;">We collaborate with reputable bus operators who prioritize safety, comfort, and punctuality. Rest assured that your journeys with our partner companies will be handled by experienced drivers and well-maintained vehicles, ensuring a smooth and enjoyable travel experience.</p>
+            </div>
+            <div class="w3-quarter">
+                <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+                <p class="w3-large">Travel Inspiration</p>
+                <p style="text-align:justify;">MythosTravel is not just a booking platform; it's also a source of travel inspiration. Discover captivating stories about Greece's ancient mythology, learn about local customs and traditions, and gain valuable insights into the various destinations you can explore. Let us ignite your wanderlust and help you create unforgettable memories.</p>
+            </div>
+        </div>
+    </div>
+  
+
+    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+        <h3 class="w3-center">CONTACT</h3>
+        <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+        <div style="margin-top:48px">
+            <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Athens, Greece</p>
+            <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +30 21045162</p>
+            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: hellenic@bus.com</p>
+            <br>
+            <form id="contact-form" action="/action_page.php" target="_blank">
+                <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+                <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+                <p>
+                <button class="w3-button w3-black" type="submit">
+                    <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </p>
+            </form>
+            <!-- Image of location/map -->
+            <img src="https://www.w3schools.com/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
+        </div>
+    </div>
+
+    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+    <footer class="w3-center w3-black w3-padding-64">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
+        <a class="w3-button w3-round-xxlarge w3-small w3-light-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            var form = document.getElementById("search-form");
+            form.reset();
+            var form = document.getElementById("contact-form");
+            form.reset();
+        };
+        
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+        
+        function w3_open() {
+          if (mySidebar.style.display === 'block') {
+            mySidebar.style.display = 'none';
+          } else {
+            mySidebar.style.display = 'block';
+          }
+        }
+        
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script src="busbooking.js"></script>
+</body>
+</html>
