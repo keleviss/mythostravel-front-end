@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Information</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../ecom-bus-booking/seatsbooking.css">
+</head>
+
+<body>
+    <div id="seatsbooking">
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-card" id="myNavbar">
+                <a href="/home/viss/ecomm/ecom-bus-booking/busbooking.html" class="w3-bar-item w3-button w3-wide"
+                    id="logo"><b>MythosTravel</b></a>
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small">
+                    <a href="/home/viss/ecomm/ecom-bus-booking/busbooking.html" class="w3-bar-item w3-button"><i
+                            class="fa fa-ticket"></i>Tickets</a>
+                    <a href="/home/viss/ecomm/ecom-bus-booking/busbooking.html#about"
+                        class="w3-bar-item w3-button">About</a>
+                    <a href="/home/viss/ecomm/ecom-bus-booking/busbooking.html#contact" class="w3-bar-item w3-button"><i
+                            class="fa fa-envelope"></i> Contact</a>
+                </div>
+
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                    onclick="w3_open()">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+                <!-- Sidebar on small screens when clicking the menu icon -->
+                <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+                    style="display:none" id="mySidebar">
+                    <a href="javascript:void(0)" onclick="w3_close()"
+                        class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+                    <a href="/home/viss/ecomm/ecom-bus-booking/busbooking.html" onclick="w3_close()"
+                        class="w3-bar-item w3-button">Tickets</a>
+                    <a href="/home/viss/ecomm/ecom-bus-booking/busbooking.html#about" onclick="w3_close()"
+                        class="w3-bar-item w3-button">About</a>
+                    <a href="/home/viss/ecomm/ecom-bus-booking/busbooking.html#contact" onclick="w3_close()"
+                        class="w3-bar-item w3-button">Contact</a>
+                </nav>
+            </div>
+            <div class="w3-display-container w3-red" id="alert" style="margin-top: -20px;"></div>
+        </div>
+
+        <div class="w3-container" style="padding:82px 126px" id="trips">
+            <h2 style="text-decoration: underline;">Booking Information</h2>
+            <div class="trip-panel" id="trip-panel">
+                <div id="tripInfo" class="tripInfo"></div>
+
+                <div class="w3-card-4">
+                    <header class="w3-container">
+                        <h4>Communication Information</h4>
+                    </header>
+                    <form class="w3-container" style="padding-bottom: 16px;" id="communicationForm">
+                        <div class="w3-row">
+                            <span>Email Address:</span>
+                            <input class="w3-input w3-border" id="email" name="email" type="text" required>
+                        </div>
+
+                        <div class="w3-row">
+                            <span>Full Name:</span>
+                            <input class="w3-input w3-border" type="text" id="fullName" name="fullName" required>
+                        </div>
+
+                        <div class="w3-row">
+                            <span>Phone:</span>
+                            <input class="w3-input w3-border" type="text" id="phone" name="phone" required>
+                        </div>
+                    </form>
+
+                    <div id="ticketDetailsSection" class="section"></div>
+                </div>
+
+                <div class="w3-display-container">
+                    <div class="w3-row-padding w3-right-align w3-grey">
+                        <h4 id="total-price">Total Price: 0.00 EUR</h4>
+                    </div>
+
+                    <div class="w3-row w3-right-align" style="padding-top: 16px;">
+                        <button class="w3-button w3-grey" id="submitButton" type="submit">Proceed To Payment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loading" class="w3-container" style="padding: 128px; display: none;">
+        <div class="loading-animation"></div>
+    </div>
+
+    <div class="w3-container w3-blue" id="payment" style="padding: 64px 320px; display:none">
+        <div class="w3-display-container w3-red" id="paymentAlert" style="border-radius: 5px;"></div>
+        <div class="w3-card w3-white" style="border-radius: 5px;">
+            <header class="w3-container" style="padding: 48px 64px 0px 64px ">
+                <h2><b>Your Payment Details</b></h2>
+            </header>
+            <div class="w3-row">
+                <form class="w3-container" style="padding: 0 64px 64px 64px;" id="paymentForm">
+                    <div class="w3-row" style="padding-top: 32px;">
+                        <label>CARDHOLDER NAME</label>
+                        <input class="w3-input" id="cardholder" name="cardholder" type="text" required>
+                    </div>
+
+                    <div class="w3-row" style="padding-top: 32px;">
+                        <span>CARD NUMBER</span>
+                        <input class="w3-input" id="cardNum" name="cardNum" type="text" required>
+                    </div>
+
+                    <div class="w3-row" style="padding-top: 32px;">
+                        <div class="w3-half">
+                            <label>EXPIRATION DATE</label>
+                            <input class="w3-input" id="expDate" name="expDate" type="text" required>
+                        </div>
+                        <div class="w3-third w3-right">
+                            <label>CVV</label>
+                            <input class="w3-input" id="cvv" name="cvv" type="password" required>
+                        </div>
+                    </div>
+
+                    <div class="w3-row w3-center" style="padding-top: 46px;">
+                        <button class="w3-button w3-blue w3-round w3-large" id="payButton">Pay Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../ecom-bus-booking/seatsbooking.js"></script>
+</body>
+
+</html>
