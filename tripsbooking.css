@@ -1,0 +1,22 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+
+.selectable-row {
+  cursor: pointer;
+}
+
+.selectable-row.selected {
+  background-color: #bbbbbb;
+}
+
+.w3-table td {
+  width: 25%; /* Set the width for each column */
+}
