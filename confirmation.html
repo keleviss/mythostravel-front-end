@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="confirmation.css">
+</head>
+
+<body>
+
+    <div id="booked">
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="w3-bar w3-white w3-card" id="myNavbar">
+                <a href="/home/viss/ecomm/ecom-bus-booking/busbooking.html" class="w3-bar-item w3-button w3-wide"
+                    id="logo"><b>MythosTravel</b></a>
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small">
+                    <a href="/home/viss/ecomm/ecom-bus-booking/busbooking.html" class="w3-bar-item w3-button"><i
+                            class="fa fa-ticket"></i>Tickets</a>
+                    <a href="/home/viss/ecomm/ecom-bus-booking/busbooking.html#about"
+                        class="w3-bar-item w3-button">About</a>
+                    <a href="/home/viss/ecomm/ecom-bus-booking/busbooking.html#contact" class="w3-bar-item w3-button"><i
+                            class="fa fa-envelope"></i> Contact</a>
+                </div>
+
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+                    onclick="w3_open()">
+                    <i class="fa fa-bars"></i>
+                </a>
+
+                <!-- Sidebar on small screens when clicking the menu icon -->
+                <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+                    style="display:none" id="mySidebar">
+                    <a href="javascript:void(0)" onclick="w3_close()"
+                        class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+                    <a href="/home/viss/ecomm/ecom-bus-booking/busbooking.html" onclick="w3_close()"
+                        class="w3-bar-item w3-button">Tickets</a>
+                    <a href="/home/viss/ecomm/ecom-bus-booking/busbooking.html#about" onclick="w3_close()"
+                        class="w3-bar-item w3-button">About</a>
+                    <a href="/home/viss/ecomm/ecom-bus-booking/busbooking.html#contact" onclick="w3_close()"
+                        class="w3-bar-item w3-button">Contact</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="w3-container w3-text-black" id="main-container"
+            style="padding-top: 86px; padding-left:256px; padding-right:256px;">
+            <!-- <h2 class="w3-center">Your tickets have been successfully booked!</h2>
+
+        <div class="w3-card-4">
+            <header class="w3-container w3-grey">
+                <h4>Booking Information</h4>
+                <p>Trip: <b>Athens</b> to <b>Larisa</b> <b>(25-06-2023)</b> Passengers: <b>1</b></p>
+            </header>
+            <div class="w3-container w3-border">
+                <h5>Communication Information</h5>
+                <p>Email Address: <b>kelesidisvissarion@gmail.com</b></p>
+                <p>Name:  <b>Kelesidis Vissarion</b></p>
+                <p>Phone: <b>6949047906</b></p>
+            </div>
+            <div class="w3-container w3-border">
+                <h5>Ticket #1 Information</h5>
+                <p>Category: <b>Student</b></p>
+                <p>Name:  <b>Kelesidis Vissarion</b></p>
+                <p>ID Number: <b>AI320459</b></p>
+            </div>
+        </div> -->
+        </div>
+        <div class="w3-container w3-text-black" style="padding: 48px 256px;">
+            <button class="w3-button w3-grey w3-right" id="downloadBtn">Download as PDF</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"
+        integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="confirmation.js"></script>
+</body>
+
+</html>
