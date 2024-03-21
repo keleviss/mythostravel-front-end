@@ -306,7 +306,7 @@ payBtn.addEventListener('click', function (event) {
 
         // Perform any further actions or display success message
         const status = "success"
-        const url = `./confirmation.html?status=${status}&bookid=${bookId}`;
+        const url = `/mythostravel-front-end/pages/confirmation.html?status=${status}&bookid=${bookId}`;
         window.location.href = url;
       })
       .catch(error => {
@@ -314,7 +314,7 @@ payBtn.addEventListener('click', function (event) {
         console.error('Error:', error);
         // Perform any further actions or display error message
         const status = "error"
-        const url = `./confirmation.html?status=${status}`;
+        const url = `/mythostravel-front-end/pages/confirmation.html?status=${status}`;
         window.location.href = url;
       });
   }
