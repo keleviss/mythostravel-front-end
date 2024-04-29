@@ -1,0 +1,24 @@
+.top-navbar {
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.navbar-row {
+  width: 70%;
+}
+
+.logo {
+  font-weight: 800; 
+  font-size: 24px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 25%);
+}
+
+.nav-links {
+  font-weight: 600;
+}
+
+.sign-in {
+  font-weight: 700;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 30%);
+}
