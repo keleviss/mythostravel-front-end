@@ -8,17 +8,39 @@
   width: 70%;
 }
 
+@media (max-width: 960px) {
+  .navbar-row {
+    width: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
 .logo {
-  font-weight: 800; 
-  font-size: 24px;
+  font-weight: 700; 
+  font-size: 1.35em;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 25%);
 }
 
-.nav-links {
-  font-weight: 600;
+.sign-in {
+  font-size: 1em;
+  font-weight: 700;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 45%);
 }
 
-.sign-in {
-  font-weight: 700;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 30%);
+.navbar {
+  background-color: navy;
+  width: 250px!important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 30%);
+}
+
+.navbar-link {
+  font-size: 16px; 
+  font-weight: 500;
+  border: none;
+}
+
+.navbar-link:hover {
+  background-color: rgba(255, 255, 255, 15%);
+  /* outline: 2px solid rgba(225, 225, 225, 15%); */
 }

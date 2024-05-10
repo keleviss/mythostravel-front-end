@@ -1,0 +1,30 @@
+.search-form-container {
+  position: relative;
+  z-index: 2;
+}
+
+.search-form {
+  width: 70%;
+  background-color: navy;
+  border-radius: 20px;
+}
+
+@media (max-width: 960px) {
+  .search-form-container {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  .search-form {
+    width: 100%;
+  }
+
+  .search-form-submit {
+    min-width: 100%;
+  }
+}
+
+.search-form-label {
+  padding-left: 0;
+  margin-bottom: 2px;
+}

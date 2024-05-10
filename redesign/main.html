@@ -16,24 +16,80 @@
 
 <body>
 
-  <div class="top-navbar container-fluid py-5 d-flex justify-content-center">
+  <div class="top-navbar container-fluid py-4 d-flex justify-content-center">
     <div class="navbar-row row">
-      <div class="col border">
-        <span id="logo" class="logo navbar-item-shadow">Mythos Travel</span>
+      <div class="col d-flex align-items-center">
+        <a href="main.html" class="text-white" style="text-decoration: none;"><span id="logo"
+            class="logo navbar-item-shadow">Mythos Travel</span></a>
       </div>
-      <div id="nav-links" class="col nav-links border d-flex justify-content-between align-items-center">
-        <span>Buses</span>
-        <span>Trips</span>
-        <span>About</span>
-        <span>Contact</span>
+      <div id="nav-links" class="col d-flex justify-content-center align-items-center">
+        <div class="navbar row m-0 w-100 p-1 rounded-pill">
+          <a class="col btn text-white navbar-link rounded-pill" href="#">Buses</a>
+          <a class="col btn text-white navbar-link rounded-pill" href="#">Trips</a>
+          <a class="col btn text-white navbar-link rounded-pill" href="#">About</a>
+        </div>
       </div>
-      <div class="col border d-flex align-items-center justify-content-end ">
-        <span class="sign-in mx-2">Sign in</span><span class="sign-in fa-solid fa-caret-down"></span>
+      <div class="col d-flex align-items-center justify-content-end ">
+        <a href="#" class="text-white" style="text-decoration: none;"><span class="sign-in mx-2">Help</span></a>
+        <a href="#" class="text-white" style="text-decoration: none;"><span class="sign-in mx-2">Sign in</span><span
+            class="sign-in fa-solid fa-caret-down"></span></a>
       </div>
     </div>
   </div>
-  <img src="pexels-lichtberlin-18910728.jpg" alt="athens-acropolis-photo"
-    style="position: absolute; top: -350px; filter: brightness(70%) blur(2px);">
+  <div class="hero-section container-fluid py-4 pt-5 d-flex justify-content-center align-items-center">
+    <div class="hero-quote row text-white ">
+      <span class="hero-text">Find cheap bus tickets and</span>
+      <span class="hero-text">travel around Greece</span>
+      <span class="hero-subtext">Book a trip with us and explore Greece's most beautiful destinations</span>
+    </div>
+  </div>
+  <div class="search-form-container container-fluid d-flex flex-column justify-content-center align-items-center">
+    <div class="search-form p-4 mt-4 row gap-3 text-white">
+      <div class="col row justify-content-center">
+        <label for="origin" class="form-label search-form-label">From</label>
+        <input type="text" class="form-control" id="origin" name="origin" placeholder="Select origin">
+      </div>
+      <div style="max-width: 40px;" class="col d-flex justify-content-center align-items-end">
+        <button type="button" class="btn btn-primary"><span class="fa-solid fa-right-left text-white"></span></button>
+      </div>
+      <div class="col row justify-content-center">
+        <label for="destination" class="form-label search-form-label">To</label>
+        <input type="text" class="form-control" id="destination" name="destination" placeholder="Select destination">
+      </div>
+      <div class="col row justify-content-center">
+        <label for="date" class="form-label search-form-label">Date</label>
+        <input type="date" class="form-control" id="date" name="date">
+      </div>
+      <div class="col row justify-content-center">
+        <label for="passenger" class="form-label search-form-label">Passengers</label>
+        <select class="form-select" name="passengers" id="passengers">
+          <option value="1" selected>1 passenger</option>
+          <option value="2">2 passenger</option>
+          <option value="3">3 passenger</option>
+          <option value="4">4 passenger</option>
+        </select>
+      </div>
+      <div class="search-form-submit col p-0 d-flex justify-content-center align-items-end">
+        <button type="submit" class="btn btn-primary w-100">Search</button>
+      </div>
+      <div class="container p-0 m-0 w-100">
+        <input type="checkbox" class="form-checkbox" id="booking">
+        <label for="booking" class="form-label m-0" style="font-size: 0.8em;">Find hotels with Booking.com</label>
+      </div>
+    </div>
+  </div>
+  <div class="hero-image container-fluid p-0 m-0" >
+    <img src="pexels-lichtberlin-18910728.jpg" alt="athens-acropolis-photo">
+  </div>
+  <div style="position: relative; z-index: 1; top: -55px; height: 750px;" class="container-fluid d-flex justify-content-center p-5 bg-light">
+    <div style="width: 70%;" class="row bg-secondary pt-5">
+      <div class="col">
+
+      </div>
+      <div class="col">asdf</div>
+      <div class="col">asdf</div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
