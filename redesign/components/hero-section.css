@@ -13,14 +13,32 @@
 
 .hero-image > img {
   position: relative;
-  width: 140%;
-  left: -20px;
-  top: -250px;
   filter: brightness(75%) blur(1px);
 }
 
+#cropped-img {
+  width: 100%;
+}
+
+#full-size-img {
+  width: 140%;
+  left: -20px;
+  top: -250px;
+  display: none;
+}
+
+@media (max-width: 1640px) {
+  #cropped-img {
+    display: none;
+  }
+
+  #full-size-img {
+    display: block;
+  }
+}
+
 @media (max-width: 1250px) {
-  .hero-image > img {
+  #full-size-img {
     top: -200px;
   }
 }
@@ -36,7 +54,7 @@
     padding-right: 2em;
   }
 
-  .hero-image > img {
+  #full-size-img {
     top: -150px;
   }
 }
