@@ -19,6 +19,10 @@
   font-weight: 600;
 }
 
+.perk:hover {
+  filter: brightness(150%);
+}
+
 @media (max-width: 960px) {
   .perks-container {
     padding-left: 3em;
