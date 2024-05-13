@@ -1,0 +1,95 @@
+.perks-container {
+  position: relative; 
+  z-index: 1; 
+  top: -55px; 
+}
+
+.perks {
+  width: 70%;
+  padding-top: 70px;
+}
+
+.perk-icon {
+  color: navy;
+  font-size: 3em;
+}
+
+.perk-title {
+  color: navy; 
+  font-weight: 600;
+}
+
+@media (max-width: 960px) {
+  .perks-container {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  .perks {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1260px) {
+  .perk-icon {
+    font-size: 2em;
+  }
+
+  .perk-title {
+    font-size: 0.9em;
+  }
+
+  .perk-text {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 760px) {
+  .perk-icon {
+    font-size: 1.8em;
+  }
+
+  .perk-title {
+    font-size: 0.85em;
+  }
+
+  .perk-text {
+    font-size: 0.8em;
+  }
+
+  #middle-perk {
+    padding-left: 2em!important;
+    padding-right: 2em!important;
+  }
+}
+
+@media (max-width: 600px) {
+  .perks-container {
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+  }
+
+  .perks {
+    flex-direction: column;
+  }
+
+  #middle-perk {
+    padding-left: 0.75em!important;
+    padding-right: 0.75em!important;
+  }
+
+  .perk {
+    flex-direction: row!important;
+    padding-top: 0.8em!important;
+    padding-bottom: 0.8em!important;
+  }
+
+  .perk-txt-container {
+    align-items: start;
+    padding-left: 2em;
+  }
+
+  .perk-title, .perk-text {
+    text-align: start!important;
+  }
+}

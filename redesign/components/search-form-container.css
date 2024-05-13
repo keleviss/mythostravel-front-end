@@ -9,6 +9,15 @@
   border-radius: 20px;
 }
 
+@media (max-width: 1200px) {
+  
+  #destinations {
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+
+}
+
 @media (max-width: 960px) {
   .search-form-container {
     padding-left: 3em;

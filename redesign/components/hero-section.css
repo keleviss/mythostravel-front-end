@@ -40,6 +40,7 @@
 @media (max-width: 1250px) {
   #full-size-img {
     top: -200px;
+    width: 150%;
   }
 }
 
@@ -56,6 +57,25 @@
 
   #full-size-img {
     top: -150px;
+  }
+}
+
+@media (max-width: 900px) {
+  #full-size-img {
+    top: -125px;
+    width: 150%;
+  }
+}
+
+@media (max-width: 800px) {
+  #full-size-img {
+    width: 160%;
+  }
+}
+
+@media (max-width: 720px) {
+  #full-size-img {
+    top: -50px;
   }
 }
 
