@@ -29,7 +29,7 @@ else
   tripTitle.textContent = `${from} - ${to} (${date}) for ${passengers} passenger`;
 
 // Construct the API URL
-const apiUrl = `http://localhost:3000/api/v1/trips/trips/${from}&${to}&${date}`;
+const apiUrl = `http://localhost:3000/api/v1/trips/${from}&${to}&${date}`;
 
 // Fetch data from the API
 fetch(apiUrl)

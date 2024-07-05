@@ -4,7 +4,7 @@ const tripId = parseInt(urlParams.get('tripId'));
 const passengers = parseInt(urlParams.get('pass'));
 
 // Construct the API URL
-const apiUrl = `http://localhost:3000/api/v1/trips/trip/${tripId}`;
+const apiUrl = `http://localhost:3000/api/v1/trip/${tripId}`;
 
 let standardPrice = 0;
 let studentPrice = 0;
@@ -107,7 +107,7 @@ fetch(apiUrl)
 
 // Function to post the booking data to the server
 function postBookingData(bookingData) {
-  return fetch('http://localhost:3000/api/v1/trips/booking', {
+  return fetch('http://localhost:3000/api/v1/booking', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -126,7 +126,7 @@ function postBookingData(bookingData) {
 
 // Function to post the ticket data to the server
 function postTicketData(ticketData) {
-  return fetch('http://localhost:3000/api/v1/trips/ticket', {
+  return fetch('http://localhost:3000/api/v1/ticket', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

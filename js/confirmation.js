@@ -24,8 +24,8 @@ if (statusmsg == 'error') {
 
     console.log('Booking ID: ', bookId);
 
-    const bookingUrl = `http://localhost:3000/api/v1/trips/bookings/${bookId}`;
-    const ticketsUrl = `http://localhost:3000/api/v1/trips/tickets/${bookId}`;
+    const bookingUrl = `http://localhost:3000/api/v1/bookings/${bookId}`;
+    const ticketsUrl = `http://localhost:3000/api/v1/tickets/${bookId}`;
 
     async function fetchBookingData() {
         const response = await fetch(bookingUrl);
@@ -49,7 +49,7 @@ if (statusmsg == 'error') {
             const tripId = bookingData.tripId;
             const passengers = bookingData.passengers;
 
-            const tripUrl = `http://localhost:3000/api/v1/trips/trip/${tripId}`;
+            const tripUrl = `http://localhost:3000/api/v1/trip/${tripId}`;
 
             async function fetchTripData() {
                 const response = await fetch(tripUrl);
