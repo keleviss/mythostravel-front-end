@@ -9,7 +9,7 @@ body, html {
 .bgimg-1 {
   background-position: center;
   background-size: cover;
-  background-image: url("/mythostravel-front-end/img/bgimg.jpg");
+  background-image: url("../img/bgimg.jpg");
   min-height: 100%;
 }
 

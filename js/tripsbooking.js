@@ -107,7 +107,7 @@ fetch(apiUrl)
           console.log("This is the tripId: ", tripId);
       
           // Submit the form
-          const url = `/mythostravel-front-end/pages/seatsbooking.html?pass=${passengers}&tripId=${tripId}`;
+          const url = `../pages/seatsbooking.html?pass=${passengers}&tripId=${tripId}`;
           window.location.href = url;
         } else {
           const alertbox = document.getElementById('alert');

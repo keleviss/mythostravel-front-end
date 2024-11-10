@@ -67,7 +67,7 @@ $(document).ready(function() {
             console.log("Select destination station");
         } else {
             // Redirect to the next page with query parameters
-            const url = `/mythostravel-front-end/pages/tripsbooking.html?pass=${passengers}&from=${startCity}&to=${destinationCity}&date=${tripDate}`;
+            const url = `../pages/tripsbooking.html?pass=${passengers}&from=${startCity}&to=${destinationCity}&date=${tripDate}`;
             window.location.href = url;
         }
     });
